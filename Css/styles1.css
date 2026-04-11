@@ -1,0 +1,414 @@
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial;
+}
+
+
+body{
+
+    height:100vh;
+    display:flex;
+    background:linear-gradient(120deg,#2c2c2c,#4a4a4a);
+
+}
+
+
+
+/* BOTON FLOTANTE */
+
+.toggle-floating{
+
+    position:fixed;
+
+    left:15px;
+    top:15px;
+
+    width:55px;
+    height:55px;
+
+    border:none;
+
+    border-radius:18px;
+
+    font-size:24px;
+
+    cursor:pointer;
+
+    z-index:999;
+
+    background:linear-gradient(#8a8a8a,#5c5c5c);
+
+    color:white;
+
+}
+
+
+
+/* SIDEBAR */
+
+.sidebar{
+     z-index:998;
+    position:fixed;
+
+    left:0;
+    top:0;
+
+    height:100%;
+
+    width:23%;
+
+   
+
+    background:linear-gradient(120deg,#2c2c2c);
+
+    color:white;
+
+    transition:0.35s;
+
+}
+
+
+.sid{
+    
+    padding:25px;
+
+
+    margin-bottom:15px;
+
+    
+}
+
+.scroll-lat{
+
+    height:100%;
+
+    overflow-y:auto;
+
+    padding-right:10px;
+
+}
+
+.sid h1{
+    text-align: right;
+    font-size: 3em;
+    font-weight: bold;
+}
+
+.sid p{
+    text-align: left;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+/* completamente oculta */
+
+.sidebar.oculta{
+
+    transform:translateX(-100%);
+
+}
+
+
+
+/* TARJETAS */
+
+.secTitle{
+    
+    font-size:3.2em;
+
+    font-weight: bold;
+
+    margin-bottom:15px;
+
+    color:white;
+}
+
+.card{
+
+    background:#ededed;
+
+    color:black;
+
+    padding:15px;
+
+    border-radius:18px;
+
+    margin-bottom:15px;
+
+    display:flex;
+
+    justify-content:space-between;
+
+}
+
+
+.card button{
+
+    border:none;
+
+    padding:5px 15px;
+
+    border-radius:15px;
+
+    background:#6d6d6d;
+
+    color:white;
+
+    cursor:pointer;
+
+}
+
+
+
+/* MAIN */
+
+.main{
+
+    flex:1;
+
+    padding:30px 30px 30px 80px;
+
+    width:100%;
+
+    
+
+}
+
+
+
+/* NAV CAPSULA */
+
+.nav-container{
+    display:flex;
+
+    gap:10px;
+
+    background:linear-gradient(#dcdcdc,#bfbfbf);
+
+    padding:8px;
+
+    border-radius:30px;
+
+    
+
+    margin-bottom:25px;
+
+}
+
+
+.nav-btn{
+    border:none;
+
+    font-size: 1.2em;
+
+    padding:20px 40px;
+
+    border-radius:25px;
+
+    cursor:pointer;
+
+    background:transparent;
+
+}
+
+
+.nav-btn.active{
+    background:linear-gradient(#9e9e9e,#7c7c7c);
+
+    color:white;
+
+}
+
+/* CONTENIDO */
+
+.content{
+
+    background:#ededed;
+
+    border-radius:25px;
+
+    position: relative;
+
+    top: 20px;
+
+    left: 15%;
+
+    padding:25px;
+
+    height:70%;
+
+    width: 75%;
+
+}
+
+
+
+/* CALENDARIO */
+
+.calendar{
+
+    width:100%;
+    position:inherit;
+
+}
+
+
+.calendar-header{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin-bottom:15px;
+
+}
+
+
+.calendar-header button{
+
+    border:none;
+
+    padding:8px 14px;
+
+    border-radius:12px;
+
+    cursor:pointer;
+
+}
+
+
+.days{
+
+    display:grid;
+
+    grid-template-columns:repeat(7,1fr);
+
+    gap:10px;
+
+}
+
+
+.day{
+
+    background:white;
+
+    padding:30px;
+
+    border-radius:12px;
+
+    text-align:center;
+
+}
+
+
+.today{
+
+    background:#3e3e3e;
+
+    color:white;
+
+}
+
+
+
+
+.overlay{
+
+    position:fixed;
+
+    top:0;
+    left:0;
+
+    width:100%;
+    height:100%;
+
+    background:rgba(0,0,0,0.55);
+
+    opacity:0;
+
+    pointer-events:none;
+
+    transition:0.35s;
+
+    z-index:500;
+
+}
+
+
+
+.overlay.activo{
+
+    opacity:1;
+
+    pointer-events:auto;
+
+}
+
+
+
+.year-grid{
+
+display:grid;
+
+grid-template-columns:repeat(4,1fr);
+
+gap:25px;
+
+}
+
+
+
+.mini-mes{
+
+font-size:14px;
+
+}
+
+
+
+.mini-titulo{
+
+font-weight:bold;
+
+margin-bottom:5px;
+
+}
+
+
+
+.mini-grid{
+
+display:grid;
+
+grid-template-columns:repeat(7,1fr);
+
+gap:5px;
+
+}
+
+
+
+.mini-grid div{
+
+padding:4px;
+
+text-align:center;
+
+border-radius:50%;
+
+}
+
+
+
+.mini-hoy{
+
+background:black;
+
+color:white;
+
+}
