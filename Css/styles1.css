@@ -62,7 +62,7 @@ body{
 
    
 
-    background:linear-gradient(120deg,#2c2c2c);
+    background:linear-gradient(120deg,#2c2c2c,#4a4a4a);
 
     color:white;
 
@@ -169,7 +169,7 @@ body{
 
     flex:1;
 
-    padding:30px 30px 30px 80px;
+    padding:15px 30px 30px 80px;
 
     width:100%;
 
@@ -188,7 +188,7 @@ body{
 
     background:linear-gradient(#dcdcdc,#bfbfbf);
 
-    padding:8px;
+    
 
     border-radius:30px;
 
@@ -246,7 +246,7 @@ body{
 
     width:90%;
 
-    height: 76%; 
+    height: 80%; 
 
     
 
@@ -330,108 +330,71 @@ body{
 
 
 
-
-.overlay{
-
-    position:fixed;
-
-    top:0;
-    left:0;
-
-    width:100%;
-    height:100%;
-
-    background:rgba(0,0,0,0.55);
-
-    opacity:0;
-
-    pointer-events:none;
-
-    transition:0.35s;
-
-    z-index:500;
-
-}
-
-
-
-.overlay.activo{
-
-    opacity:1;
-
-    pointer-events:auto;
-
-}
-
-
-
-.year-grid{
-
-display:grid;
-
-grid-template-columns:repeat(4,1fr);
-
-gap:25px;
-
-}
-
-
-
-.mini-mes{
-
-    font-size:14px;
-
-    background-color: #fff;
-    border-radius: 10px;
-    padding: 2px;
-
-    font-weight: bold;
-    text-align: center;
-
-    
-
-}
-
-
-
 .mini-titulo{
 
-font-weight:bold;
+    font-weight:bold;
 
-margin-bottom:5px;
+    margin-bottom:5px;
 
 }
 
 
+
+
+
+
+
+
+
+
+.oculto{
+    display:none !important;
+}
+
+/* overlay */
+.overlay{
+    position:fixed;
+    top:0;left:0;
+    width:100%;height:100%;
+    background:rgba(0,0,0,0.55);
+    opacity:0;
+    pointer-events:none;
+    transition:0.3s;
+}
+
+.overlay.activo{
+    opacity:1;
+    pointer-events:auto;
+}
+
+/* año */
+.year-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:25px;
+}
+
+.mini-mes{
+    background:#ffffff8f;
+    border-radius:10px;
+    padding:5px;
+    font-weight: bold;
+    text-align:center;
+    font-size:14px;
+}
 
 .mini-grid{
-
-display:grid;
-
-grid-template-columns:repeat(7,1fr);
-
-gap:5px;
-
+    display:grid;
+    grid-template-columns:repeat(7,1fr);
+    gap:4px;
 }
-
-
 
 .mini-grid div{
-
-padding:4px;
-
-text-align:center;
-
-border-radius:50%;
-
+    padding:4px;
+    border-radius:50%;
 }
 
-
-
 .mini-hoy{
-
-background:black;
-
-color:white;
-
+    background:black;
+    color:white;
 }

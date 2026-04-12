@@ -10,82 +10,51 @@
 <title>Date's Mate</title>
 </head>
 
-
 <body>
 
-
-<!-- BOTON TOGGLE FIJO -->
 <button class="toggle-floating" id="toggleBtn">☰</button>
 
-
-<!-- SIDEBAR (empieza cerrada) -->
 <div class="sidebar oculta" id="sidebar">
     <div class="scroll-lat">
-        <div class="sid">
-            <h1>Principal</h1>
-        </div>
-        <div class="sid">
-            <p>Fechas Proximas</p>
-            <div class="fecha-proxima">
-                
-            </div>
-        </div>
-        <div class="sid">
-            <p>Registros Recientes</p>
-            <div class="registro-reciente">
-                
-            </div>
-        </div>
+        <div class="sid"><h1>Principal</h1></div>
+        <div class="sid"><p>Fechas Proximas</p></div>
+        <div class="sid"><p>Registros Recientes</p></div>
     </div>
 </div>
 
-
-<!-- CAPA OSCURA -->
 <div class="overlay" id="overlay"></div>
 
-
-
-<!-- MAIN -->
 <div class="main">
 
-<!-- NAV estilo capsula -->
-<div style="align-items:center; gap: 50px; display:flex;justify-content:right;">
-
-    <div class="nav-container" style="width: 75%;">
-
-        <button class="nav-btn active" style="width: 25%;" onclick="cambiarSeccion('calendario',this)">Calendario</button>   
-
+<div style="display:flex;justify-content:right;">
+    <div class="nav-container" style="width:75%;">
+        <button class="nav-btn active" style="width: 25%;" onclick="cambiarSeccion('calendario',this)">Calendario</button>
         <button class="nav-btn" style="width: 25%;" onclick="cambiarSeccion('tareas',this)">Tareas</button>
-
         <button class="nav-btn" style="width: 25%;" onclick="cambiarSeccion('notas',this)">Registros</button>
-
         <button class="nav-btn" style="width: 25%;" onclick="cambiarSeccion('configuraciones',this)">Configuraciones</button>
-
-    </div>
+    </div>  
 </div>
 
-
-<div style="align-items:center; gap: 50px; display:flex;justify-content:center;">
-    <div class="nav-container" style="width: 40%;">
-
-        <button class="nav-btn" style="width: 40%;" onclick="cambiartiempo('Semana',this)">Semana</button>
-
-        <button class="nav-btn active" style="width: 40%;" onclick="cambiartiempo('Mes',this)">Mes</button>
-
-        <button class="nav-btn" style="width: 40%;" onclick="cambiartiempo('Año',this)">Año</button>
+<div id="barra-tiempo" style="display:flex;justify-content:right;">
+    <div class="nav-container" style="width:40%;">
+        <button class="nav-btn" style="width:40%;" onclick="cambiartiempo('Semana',this)">Semana</button>
+        <button class="nav-btn active" style="width:40%;" onclick="cambiartiempo('Mes',this)">Mes</button>
+        <button class="nav-btn" style="width:40%;" onclick="cambiartiempo('Año',this)">Año</button>
     </div>
 </div>
-
 
 <div class="seccion-main">
+
+    <!-- calendario -->
     <div class="content" id="contenido"></div>
 
+    <!-- otras secciones -->
+    <div class="content oculto" id="contenido-secundario"></div>
 
-    </div>
 </div>
 
+</div>
 
 <script src="Js/script1.js"></script>
-
 </body>
 </html>
