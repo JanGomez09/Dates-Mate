@@ -232,15 +232,31 @@ body{
 
     position: relative;
 
- 
-
-    padding:25px;
+    padding:20px;
 
     height:100%;
 
     width: 100%;
 
+    left: 65px;
+
 }
+
+.seccion-main{
+
+    width:90%;
+
+    height: 76%; 
+
+    
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+}   
 
 
 
@@ -363,7 +379,16 @@ gap:25px;
 
 .mini-mes{
 
-font-size:14px;
+    font-size:14px;
+
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 2px;
+
+    font-weight: bold;
+    text-align: center;
+
+    
 
 }
 
