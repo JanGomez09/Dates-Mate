@@ -40,12 +40,11 @@ if(seccion=="calendario"){
     return
 }
 
-barra.classList.add("oculto")
-cal.classList.add("oculto")
-sec.classList.remove("oculto")
+
 
 if(seccion=="tareas"){
     sec.innerHTML="<h2>Tareas</h2>"
+    window.location.href = "tesks.html";
 }
 
 if(seccion=="notas"){
