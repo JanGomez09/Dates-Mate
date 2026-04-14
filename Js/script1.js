@@ -49,10 +49,12 @@ if(seccion=="tareas"){
 
 if(seccion=="notas"){
     sec.innerHTML="<h2>Registros</h2>"
+    window.location.href = "files.html";
 }
 
 if(seccion=="configuraciones"){
     sec.innerHTML="<h2>Configuraciones</h2>"
+    window.location.href = "settings.html";
 }
 }
 

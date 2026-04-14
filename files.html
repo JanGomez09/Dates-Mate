@@ -29,8 +29,8 @@
 <div style="display:flex;justify-content:right;">
     <div class="nav-container" style="width:75%;">
         <button class="nav-btn" style="width: 25%;" onclick="cambiarSeccion('calendario',this)">Calendario</button>
-        <button class="nav-btn active" style="width: 25%;" onclick="cambiarSeccion('tareas',this)">Tareas</button>
-        <button class="nav-btn" style="width: 25%;" onclick="cambiarSeccion('notas',this)">Registros</button>
+        <button class="nav-btn " style="width: 25%;" onclick="cambiarSeccion('tareas',this)">Tareas</button>
+        <button class="nav-btn active" style="width: 25%;" onclick="cambiarSeccion('notas',this)">Registros</button>
         <button class="nav-btn" style="width: 25%;" onclick="cambiarSeccion('configuraciones',this)">Configuraciones</button>
     </div>  
 </div>
@@ -39,14 +39,13 @@
 
 
 <div id="barra-tiempo" style="display:flex;justify-content:right; font-weight: bold; gap:50px">
-    <p style="font-size: 3.8em; color: white;">Tareas</p>
+    <p style="font-size: 3.8em; color: white;">Registros</p>
     <br>
     
-    <div class="nav-container" style="width:50%;">
-        <button class="nav-btn" style="width:40%;" onclick="cambiartiempo('Semana',this)">Proximamente</button>
-        <button class="nav-btn active" style="width:40%;" onclick="cambiartiempo('Mes',this)">Hoy</button>
-        <button class="nav-btn" style="width:40%;" onclick="cambiartiempo('Año',this)">Completados</button>
-        <button class="nav-btn" style="width:40%;" onclick="cambiartiempo('Año',this)">Añadir</button>
+    <div class="nav-container" style="width:60%;">
+
+        <button class="nav-btn active" style="width:50%;" onclick="cambiartiempo('Año',this)">Recientes Registros</button>
+        <button class="nav-btn" style="width:50%;" onclick="cambiartiempo('Año',this)">Añadir</button>
     </div>
 </div>
 
@@ -62,6 +61,6 @@
 
 </div>
 
-<script src="Js/script2.js"></script>
+<script src="Js/script3.js"></script>
 </body>
 </html>

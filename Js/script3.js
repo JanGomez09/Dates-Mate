@@ -35,6 +35,7 @@ let sec = document.getElementById("contenido-secundario")
 if(seccion=="calendario"){
     
     window.location.href = "index.html";
+    
     return
 }
 
@@ -42,19 +43,18 @@ if(seccion=="calendario"){
 
 if(seccion=="tareas"){
 
+    window.location.href = "tesks.html";
     
-
 }
 
 if(seccion=="notas"){
-    window.location.href = "files.html";
    
+    
 }
 
 if(seccion=="configuraciones"){
-    sec.innerHTML="<h2>Configuraciones</h2>"
     window.location.href = "settings.html";
-
+ 
 }
 }
 
@@ -68,4 +68,4 @@ function cambiartiempo(modo,btn){
 /* base */
 
 /* inicio */
-cambiarSeccion("tareas", document.querySelector(".nav-btn.active"))
+cambiarSeccion("notas", document.querySelector(".nav-btn.active"))
