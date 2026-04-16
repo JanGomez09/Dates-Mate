@@ -1,7 +1,9 @@
 let sidebar = document.getElementById("sidebar")
 let overlay = document.getElementById("overlay")
 
+let mode = "Hoy";
 
+let tasklist = [];
 
 document.getElementById("toggleBtn").onclick = () =>
 {
@@ -61,9 +63,72 @@ if(seccion=="configuraciones"){
 /* modo tiempo */
 function cambiartiempo(modo,btn){
     activarGrupo(btn)
-    modoTiempo = modo
+    mode = modo
+    
+     let contenedor = document.getElementById("contenido");
+
+    // limpiar contenido anterior (opcional)
+    
+    
+
+    switch (modo){
+        case "Completadas":
+            contenedor.innerHTML = "";
+            console.log("Yesterday");
+        break;
+
+        case "Hoy":
+            contenedor.innerHTML = "";
+            today_task();
+        break;
+
+        case "Proximamente":
+            contenedor.innerHTML = "";
+            console.log("Keep it coming back");
+        break;
+
+        case "Add":
+            contenedor.innerHTML = "";
+            console.log("Another brick");   
+            
+        break;
+    }
+}
+
+function creatTaskpanel(){
 
 }
+function today_task(){
+
+    let contenedor = document.getElementById("contenido");
+
+    
+    if (tasklist.length === 0){
+
+        let img = document.createElement("img");
+        img.src = "clipbeard.png";
+        img.alt = "Sin tareas";
+        img.style.width = "450px"; // opcional
+        img.style.display = "block";
+        img.style.margin = "30px auto";
+
+        contenedor.appendChild(img);
+
+        let title = document.createElement("p");
+        title.textContent = "Felicidades, estas al dia";
+        title.style.fontSize = "2.5em";
+        title.style.fontWeight = "bold"
+        title.style.textAlign = "center";
+
+        contenedor.appendChild(title);
+
+    } else {
+        creatTaskpanel();
+    }
+
+}
+
+
 
 /* base */
 

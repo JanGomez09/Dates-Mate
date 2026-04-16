@@ -43,20 +43,24 @@
     <br>
     
     <div class="nav-container" style="width:50%;">
-        <button class="nav-btn" style="width:40%;" onclick="cambiartiempo('Semana',this)">Proximamente</button>
-        <button class="nav-btn active" style="width:40%;" onclick="cambiartiempo('Mes',this)">Hoy</button>
-        <button class="nav-btn" style="width:40%;" onclick="cambiartiempo('Año',this)">Completados</button>
-        <button class="nav-btn" style="width:40%;" onclick="cambiartiempo('Año',this)">Añadir</button>
+        <button class="nav-btn" style="width:40%;" onclick="cambiartiempo('Proximamente',this)">Proximamente</button>
+        <button class="nav-btn active" style="width:40%;" onclick="cambiartiempo('Hoy',this)">Hoy</button>
+        <button class="nav-btn" style="width:40%;" onclick="cambiartiempo('Completadas',this)">Completados</button>
+        <button class="nav-btn" style="width:40%;" onclick="cambiartiempo('Add',this)">Añadir</button>
     </div>
 </div>
 
 <div class="seccion-main">
 
     <!-- calendario -->
-    <div class="content" id="contenido"></div>
+    <div class="content" id="contenido">
+
+    </div>
 
     <!-- otras secciones -->
-    <div class="content oculto" id="contenido-secundario"></div>
+    <div class="content oculto" id="contenido-secundario">
+        
+    </div>
 
 </div>
 
